@@ -65,7 +65,7 @@ public class DeepBlueSim {
             WPIUtilJNI.Helper.setExtractOnStaticLoad(false);
             WPIMathJNI.Helper.setExtractOnStaticLoad(false);
 
-            CombinedRuntimeLoader.loadLibraries(DeepBlueSim.class, "wpiutiljni",
+            CombinedRuntimeLoader.loadLibraries(CombinedRuntimeLoader.class, "wpiutiljni",
                     "wpimathjni", "ntcorejni");
         }
 

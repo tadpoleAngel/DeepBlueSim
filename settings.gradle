@@ -1,5 +1,6 @@
 rootProject.name = 'DeepBlueSim'
-includeBuild 'WPIWebSockets'
+// I was fixing stuff
+// includeBuild 'WPIWebSockets'
 includeBuild 'plugin'
 includeBuild 'tests'
 includeBuild 'example'

@@ -22,7 +22,9 @@ plugins {
     id "org.carlmontrobotics.webots" version "1.0.0"
 
     // Support creating a license report of all dependencies
-    id 'com.jaredsburrows.license' version '0.8.80'
+    // id 'com.jaredsburrows.license' version '0.9.8'
+    // had to change this too
+    id "com.github.jk1.dependency-license-report" version "2.0"
 
     // Support WPILib
     id "edu.wpi.first.GradleRIO" version "2024.3.2"
@@ -90,6 +92,8 @@ dependencies {
     implementation group: "us.hebi.quickbuf", name: "quickbuf-runtime", version: wpi.versions.quickbufVersion.get();
 
     implementation group: 'commons-cli', name: 'commons-cli', version: '1.8.0'
+    
+    // implementation 'org.carlmontrobotics:lib199:4.0.2'
 }
 
 // Configure the building of the fat jar
@@ -100,8 +104,11 @@ shadowJar {
     archiveVersion.set('')
 
     // Make sure the licenseReport task runs first
-    dependsOn "licenseReport"
+    // dependsOn "licenseReport"
     // dependsOn jar
+
+    // Also changed this
+    dependsOn "generateLicenseReport"
 
     // Webots puts the correct version of its libs on the classpath before
     // launching the controller, so don't include them.

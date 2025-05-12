@@ -59,7 +59,9 @@ def includeDesktopSupport = true
 dependencies {
     implementation wpi.java.deps.wpilib()
     implementation wpi.java.vendor.java()
-    implementation "com.github.deepbluerobotics:lib199:4d86ad4e6f03d5606b56749bf657c29da675731e"
+    // implementation "com.github.deepbluerobotics:lib199:4d86ad4e6f03d5606b56749bf657c29da675731e"
+    // Jitpack is case sensitive
+    implementation "com.github.DeepBlueRobotics:lib199:4d86ad4e6f03d5606b56749bf657c29da675731e"
 
     roborioDebug wpi.java.deps.wpilibJniDebug(wpi.platforms.roborio)
     roborioDebug wpi.java.vendor.jniDebug(wpi.platforms.roborio)
